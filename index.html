@@ -10,18 +10,36 @@
 
 <!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Module 4 - Labo</title>
+    <title>The scissoring</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- this is the stars code from https://www.w3schools.com/howto/howto_css_star_rating.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var serviceDest = 250;
+        var galleryIndex = 1;
+        var gallery = [
+            "https://i1.wp.com/www.hadviser.com/wp-content/uploads/2020/02/1-short-angled-bob-B6DM3BvJ20r.jpg?resize=983%2C1099&ssl=1",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSq3gcrgzL2ZORXrHW65na8tXUr2HhTKB3P8368CFw4o6LtROyV&usqp=CAU",
+            "https://www.byrdie.com/thmb/DV65qLWotifk-BA82DL0EPqP28I=/735x0/cdn.cliqueinc.com__cache__posts__208438__the-most-flattering-short-haircuts-for-thick-hair-2039275.700x0c-059d9cfb4d6246728f9b3d3764ece000.jpg",
+            "https://g4k5b9h2.stackpathcdn.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-11.00.54-AM.png",
+            "https://ath2.unileverservices.com/wp-content/uploads/sites/3/2017/04/short-haircuts-for-women-over-50-cropped-pixie.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpnCzp_YNsYU5Lrt3l0MWyMSMtBDdIp0D34L6X0uxwUwK57V6V&usqp=CAU",
+            "https://lh3.googleusercontent.com/proxy/1xnYKc1c6A-_o5tzHTE77WnlmKBn5h5uC9QZ-U9uLimiqMBsf98s6XoXzlBDmhwf-NRTTmzJJzq4H674g6SKe-BwX-7bnnMNme79tZn68xkFMuWDOX2iK2bYKr29e5uzAMRQVYRBUP1KDYMs52xYKP1M0IE",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-aI1KtXp4sJoLHDNlL3NS_GMeS_5B3MeU6whHcL2EynAYoP0w&usqp=CAU"
+        ];
+    </script>
 </head>
 
 
@@ -32,54 +50,102 @@
     <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
     <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Nice Scissors</h1>
-        <p>We'll take care of your hair!</p>
+    <div class="container-md p-3 my-3 border bg-dark text-white" style="text-align: center;">
+        <img class="logo" src="./images/logo.svg"/>
+        <h1>Welcome to The scissoring</h1>
+        
+        <p>THE salon for your hair</p>
     </div>
 
     <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
     <!-- It can be useful for placement of information -->
-    <div class="row p-3">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us</div>
+    <div class="container-md">
+        <div class="row p-3">
+            <div class="col-sm-3 pl-5 header" onclick="window.scrollBy(0,100)">Home</div>
+            <div class="col-sm-3 header" onclick="window.scrollBy(0,500)">Services</div>
+            <div class="col-sm-3 header" onclick="window.scrollBy(0,900)">Calendar</div>
+            <div class="col-sm-3 header"  onclick="window.scrollBy(0,1300)">Contact us</div>
+        </div>
     </div>
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
+    <div class="container-md p-3 my-3 border">
+        <div class="row">
+            <div class="col col-sm-4">
+                <img id="Gallery" class="gallery" src="https://i1.wp.com/www.hadviser.com/wp-content/uploads/2020/02/1-short-angled-bob-B6DM3BvJ20r.jpg?resize=983%2C1099&ssl=1" />
+            </div>
+            <div class="col col-sm-8">                
+                <h3>About us</h3>
+                <p>We are a group of artists using the latest technologies and equipment to provide you with the YOUR prefered look.</p>
+                <p>Our teams will make a miracle out of your hair and we guarantee that you will love your new look.</p>
+                <p>Our specialists are highly skilled, well respected and at the top of their field.</p>    
+            </div>
+        </div>
     </div>
 
+    <div class="container-md p-3 my-3 border">
+        <row>           
+            <h3>Our availability</h3>
+            <p>The Scissoring salons are open 24/7, so feel free to drop by any time.</p>
+            <div class="alert alert-info" role="alert">
+                <span class="fas fa-info"></span>
+                To make sure you don't have to wait for other customers you can book an appointment by clicking <a class="alert-link" href="#" onclick="window.scrollBy(0, 250);">here</a>
+            </div>
+        </row>
+    </div>
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
     <div class="container">
-        <h2>Service description</h2>
-        <p>Here is a list of services offered</p>            
-        <table class="table table-primary table-hover">
+        <h2>Services for you</h2>
+        <p>These services are offered to you at the best prices and highest quality</p>            
+        <table class="table table-hover">
             <thead>
             <tr>
                 <th>Service</th>
                 <th>Description</th>
+                <th>Rating</th>
+                <th>Price</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>Haircut</td>
-                <td>Bla bla</td>
+                <td>Tired of the same look? feeling adventurous? we recommend this service for you.</td>
+                <td>
+                    <div> 
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </td>
+                <td>50.00$</td>
             </tr>
             <tr>
                 <td>Drying</td>
                 <td>Bla bla</td>
+                <td>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </td>
+                <td>20.00$</td>
             </tr>
             <tr>
                 <td>Coloring</td>
                 <td>Bla bla</td>
+                <td>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </td>
+                <td>30.00$</td>
             </tr>
             </tbody>
         </table>
@@ -246,5 +312,20 @@
         </div>
     </div>
 
+    <footer class="page-footer font-small pt-4">
+        <div class="container">
+            Contact us:
+            +1(123)-4567-9101
+            the.scissoring@scissoring.im
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+        setInterval( function() { 
+            document.getElementById("Gallery").src = gallery[galleryIndex];
+            galleryIndex = ( galleryIndex + 1 ) % gallery.length;
+        }, 5000);
+    </script>
 </body>
 </html>
