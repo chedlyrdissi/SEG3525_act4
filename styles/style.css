@@ -5,8 +5,10 @@
 
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Modern serif", "dancing_script_otregular";
   text-shadow: 3px 3px 1px black;
+  font-weight: 700;
+  font-size: xx-large;
 }
 
 div.header:hover {
@@ -71,4 +73,15 @@ img.profile {
 
 svg {
 	fill: white;
+}
+
+h3 {
+	font-family: "Modern serif", "dancing_script_otregular"; 
+}
+
+h2 {
+	font-family: "Modern serif", "dancing_script_otregular";
+	font-style: bold;
+	font-weight: 700;
+    font-size: xx-large; 
 }
